@@ -1,0 +1,191 @@
+:root {
+  --primary: #020948;
+  --secondary: #75e6ff;
+  --tertiary: #e8e9ff;
+  --accent: #fb6b1a;
+  --dark: #333;
+  --light: #fff;
+  --foreground: #f6f6f6;
+}
+/* untuk membuat keseluruhan page website menggunakan font montserrat */
+* {
+  font-family: "Montserrat", sans-serif;
+}
+
+body,
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+.page-center {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/*  Start Utility class */
+.d-flex {
+  display: flex;
+}
+
+.flex-wrap {
+  flex-wrap: wrap;
+}
+
+/* my singkatan dari margin dan y dimana top bottom */
+.my-auto {
+  margin: auto 0;
+}
+/* x singkatan dari lef dan right */
+.mx-auto {
+  margin: 0 auto;
+}
+.text-center {
+  text-align: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.justify-space-between {
+  justify-content: space-between;
+}
+
+.d-grid {
+  display: grid;
+}
+
+.grid-2 {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.text-white {
+  color: var(--light);
+}
+/* btn untuk styling skeleton button */
+.btn {
+  padding: 16px 32px;
+  border-radius: 100px;
+  border: none;
+  /* Gunakan satuan rem untuk font flexible untuk user */
+  font-size: 1rem;
+  cursor: pointer;
+}
+/* class primary untuk button */
+button.primary {
+  background-color: var(--accent);
+  color: var(--light);
+}
+
+button.secondary {
+  background-color: var(--light);
+  color: var(--primary);
+}
+
+.card {
+  padding: 32px;
+  border-radius: 10px;
+  background-color: var(--foreground);
+  box-shadow: 0px 16px 40px 0px rgba(0, 0, 0, 0.2);
+  color: var(--dark);
+  max-width: 300px;
+}
+
+.card img {
+  width: 64px;
+  height: 64px;
+}
+
+.card:hover {
+  background-color: var(--primary);
+  color: var(--light);
+  cursor: pointer;
+}
+
+.gap-16 {
+  gap: 16px;
+}
+
+.gap-24 {
+  gap: 24px;
+}
+
+.gap-20 {
+  gap: 20px;
+}
+
+.gap-32 {
+  gap: 32px;
+}
+
+.gap-8 {
+  gap: 8px;
+}
+
+.gap-48 {
+  gap: 48px;
+}
+.gap-150 {
+  gap: 150px;
+}
+/* end Utility class */
+
+.hero {
+  background-color: var(--primary);
+  padding: 60px 0;
+}
+
+/* .hero-left {
+  width: 300px;
+  height: 100px;
+} */
+.expertise {
+  background-color: var(--light);
+}
+
+/* media query for mobile device */
+@media (max-width: 768px) {
+  .hero-content {
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+  }
+
+  .hero-right img {
+    width: 60%;
+    height: 60%;
+  }
+
+  .hero-right {
+    margin: 0 auto;
+    text-align: center;
+  }
+  .hero-left button {
+    width: 100%;
+  }
+  .hero-left {
+    text-align: center;
+  }
+
+  .expertise {
+    padding: 60px 0;
+  }
+}
+
+@media (min-width: 768px) {
+  .hero-content img {
+    width: 530px;
+    height: 570px;
+  }
+
+  .hero-left button {
+    width: fit-content;
+  }
+
+  .expertise {
+    padding: 120px 0;
+  }
+}
